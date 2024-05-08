@@ -1,0 +1,24 @@
+{% extends 'authentication/index.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <form action="/signin" method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" ><br>
+
+        <label for="">Password</label>
+        <input type="password" id="password1" name="password1" ><br>
+
+        <button type="submit">SignIn</button>
+    </form>
+    {% endblock content %}
+</body>
+</html>
